@@ -1,0 +1,12 @@
+<div *ngFor="let field of field.fieldGroup; let i = index" style="background-color: chartreuse;">
+    This is the array type <br>
+    The model inside this wrapper is {{model | json}}
+
+    <formly-field [field]="field"></formly-field>
+    <div>
+      <button type="button" (click)="remove(i)">Remove</button>
+    </div>
+</div>
+<div style="margin:30px 0;">
+  <button type="button" (click)="add()">Add</button>
+</div>
